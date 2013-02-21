@@ -29,4 +29,18 @@ interface AppStoreManagerInterface
      * @return StoreManager
      */
     public function getStoreManager();
+
+    /**
+     * Get store by country ISO code
+     *
+     * @param string $countryISO
+     */
+    public function getStore($countryISO);
+
+    /**
+     * Get price transformer by currency
+     *
+     * @param string $currency
+     */
+    public function getPriceTransformer($currency);
 }
