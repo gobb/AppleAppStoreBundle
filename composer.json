@@ -1,0 +1,27 @@
+{
+    "name": "apple/app-store-bundle",
+    "description": "Apple apn push notifications",
+    "keywords": ["apple", "store", "app-store", "apple app store"],
+    "homepage": "http://github.com/ZhukV/AppleAppStoreBundle",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitaliy Zhuk",
+            "email": "zhuk2205@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": ">=2.1,<2.3-dev",
+        "apple/app-store": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": { "Apple\\AppStoreBundle": "" }
+    },
+
+    "target-dir": "Apple/AppStoreBundle",
+    "minimum-stability": "dev"
+}

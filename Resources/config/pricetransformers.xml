@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="apple.appstore.pricetransformer.usd.class">Apple\AppStore\USDPriceTransformer</parameter>
+        <parameter key="apple.appstore.pricetransformer.rub.class">Apple\AppStore\RUBPriceTransformer</parameter>
+        <parameter key="apple.appstore.pricetransformer.uah.class">Apple\AppStore\UAHPriceTransformer</parameter>
+        <parameter key="apple.appstore.pricetransformer.cad.class">Apple\AppStore\CADPriceTransformer</parameter>
+    </parameters>
+
+    <services>
+        <service id="apple.appstore.pricetransformer.usd" class="%apple.appstore.pricetransformer.usd.class%">
+            <tag name="apple.appstore.pricetransformer" />
+        </service>
+
+        <service id="apple.appstore.pricetransformer.rub" class="%apple.appstore.pricetransformer.rub.class%">
+            <tag name="apple.appstore.pricetransformer" />
+        </service>
+
+        <service id="apple.appstore.pricetransformer.uah" class="%apple.appstore.pricetransformer.uah.class%">
+            <tag name="apple.appstore.pricetransformer" />
+        </service>
+
+        <service id="apple.appstore.pricetransformer.cad" class="%apple.appstore.pricetransformer.cad.class%">
+            <tag name="apple.appstore.pricetransformer" />
+        </service>
+    </services>
+</container>
