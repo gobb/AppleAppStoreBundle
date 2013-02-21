@@ -3,7 +3,7 @@ Apple AppStore Bundle
 
 The AppleAppStoreBundle adds support apple app stores functionality
 
-[![Build Status](https://travis-ci.org/ZhukV/AppleAppStoreBundle.png)](https://travis-ci.org/ZhukV/AppleAppStoreBundle)
+[![Build Status](https://travis-ci.org/ZhukV/AppleAppStoreBundle.png?branch=master)](https://travis-ci.org/ZhukV/AppleAppStoreBundle)
 
 Documentation
 -------------
