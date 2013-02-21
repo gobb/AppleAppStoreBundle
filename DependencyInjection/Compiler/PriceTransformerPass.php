@@ -60,7 +60,7 @@ class PriceTransformerPass implements CompilerPassInterface
             $priceTransformer = $container->get($id);
 
             // Get currency
-            $currency = strtolower($priceTransformer->getPriceCurrency());
+            $currency = strtolower($priceTransformer->getCurrency());
 
             $priceTransformerManager
                 ->addMethodCall('add', array(new Reference($id)));
