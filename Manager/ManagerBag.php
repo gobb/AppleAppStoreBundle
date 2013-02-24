@@ -76,6 +76,6 @@ abstract class ManagerBag implements \Iterator, \Countable
      */
     public function get($key)
     {
-        return $this->storage[$key];
+        return $this->storage[strtolower($key)];
     }
 }

@@ -30,7 +30,7 @@ class StoreManager extends ManagerBag
      */
     public function add(AppStoreInterface $appStore)
     {
-        $this->storage[$appStore->getCountryISO()] = $appStore;
+        $this->storage[strtolower($appStore->getCountryISO())] = $appStore;
 
         return $this;
     }

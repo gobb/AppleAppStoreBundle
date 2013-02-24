@@ -30,7 +30,7 @@ class PriceTransformerManager extends ManagerBag
      */
     public function add(PriceTransformerInterface $priceTransformer)
     {
-        $this->storage[$priceTransformer->getPriceCurrency()] = $priceTransformer;
+        $this->storage[strtolower($priceTransformer->getCurrency())] = $priceTransformer;
 
         return $this;
     }

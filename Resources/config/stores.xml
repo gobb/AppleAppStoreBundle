@@ -13,19 +13,19 @@
 
     <services>
         <service id="apple.app_store.store.us" class="%apple.app_store.store.us.class%">
-            <tag name="apple.appstore.store" pricetransformer="usd" />
+            <tag name="apple.app_store.store" pricetransformer="usd" />
         </service>
 
         <service id="apple.app_store.store.ru" class="%apple.app_store.store.ru.class%">
-            <tag name="apple.appstore.store" pricetransformer="rub" />
+            <tag name="apple.app_store.store" pricetransformer="rub" />
         </service>
 
         <service id="apple.app_store.store.ca" class="%apple.app_store.store.ca.class%">
-            <tag name="apple.appstore.store" pricetransformer="cad" />
+            <tag name="apple.app_store.store" pricetransformer="cad" />
         </service>
 
         <service id="apple.app_store.store.ua" class="%apple.app_store.store.ua.class%">
-            <tag name="apple.appstore.store" pricetransformer="uah" />
+            <tag name="apple.app_store.store" pricetransformer="uah" />
         </service>
     </services>
 </container>
