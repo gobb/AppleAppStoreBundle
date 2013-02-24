@@ -5,26 +5,26 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="apple.appstore.store.us.class">Apple\AppStore\USStore</parameter>
-        <parameter key="apple.appstore.store.ru.class">Apple\AppStore\RUStore</parameter>
-        <parameter key="apple.appstore.store.ca.class">Apple\AppStore\CAStore</parameter>
-        <parameter key="apple.appstore.store.ua.class">Apple\AppStore\UAStore</parameter>
+        <parameter key="apple.app_store.store.us.class">Apple\AppStore\USStore</parameter>
+        <parameter key="apple.app_store.store.ru.class">Apple\AppStore\RUStore</parameter>
+        <parameter key="apple.app_store.store.ca.class">Apple\AppStore\CAStore</parameter>
+        <parameter key="apple.app_store.store.ua.class">Apple\AppStore\UAStore</parameter>
     </parameters>
 
     <services>
-        <service id="apple.appstore.store.us" class="%apple.appstore.store.us.class%">
+        <service id="apple.app_store.store.us" class="%apple.app_store.store.us.class%">
             <tag name="apple.appstore.store" pricetransformer="usd" />
         </service>
 
-        <service id="apple.appstore.store.ru" class="%apple.appstore.store.ru.class%">
+        <service id="apple.app_store.store.ru" class="%apple.app_store.store.ru.class%">
             <tag name="apple.appstore.store" pricetransformer="rub" />
         </service>
 
-        <service id="apple.appstore.store.ca" class="%apple.appstore.store.ca.class%">
+        <service id="apple.app_store.store.ca" class="%apple.app_store.store.ca.class%">
             <tag name="apple.appstore.store" pricetransformer="cad" />
         </service>
 
-        <service id="apple.appstore.store.ua" class="%apple.appstore.store.ua.class%">
+        <service id="apple.app_store.store.ua" class="%apple.app_store.store.ua.class%">
             <tag name="apple.appstore.store" pricetransformer="uah" />
         </service>
     </services>

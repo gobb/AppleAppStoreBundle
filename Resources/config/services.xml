@@ -5,18 +5,18 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="apple.appstore.pricetransformers.class">Apple\AppStoreBundle\Manager\PriceTransformerManager</parameter>
-        <parameter key="apple.appstore.stores.class">Apple\AppStoreBundle\Manager\StoreManager</parameter>
-        <parameter key="apple.appstore.class">Apple\AppStoreBundle\Manager\AppStoreManager</parameter>
+        <parameter key="apple.app_store.pricetransformers.class">Apple\AppStoreBundle\Manager\PriceTransformerManager</parameter>
+        <parameter key="apple.app_store.stores.class">Apple\AppStoreBundle\Manager\StoreManager</parameter>
+        <parameter key="apple.app_store.class">Apple\AppStoreBundle\Manager\AppStoreManager</parameter>
     </parameters>
 
     <services>
-        <service id="apple.appstore.pricetransformers" class="%apple.appstore.pricetransformers.class%" />
-        <service id="apple.appstore.stores" class="%apple.appstore.stores.class%" />
+        <service id="apple.app_store.pricetransformers" class="%apple.app_store.pricetransformers.class%" />
+        <service id="apple.app_store.stores" class="%apple.app_store.stores.class%" />
 
-        <service id="apple.appstore" class="%apple.appstore.class%">
-            <argument type="service" id="apple.appstore.stores" />
-            <argument type="service" id="apple.appstore.pricetransformers" />
+        <service id="apple.app_store" class="%apple.app_store.class%">
+            <argument type="service" id="apple.app_store.stores" />
+            <argument type="service" id="apple.app_store.pricetransformers" />
         </service>
     </services>
 </container>

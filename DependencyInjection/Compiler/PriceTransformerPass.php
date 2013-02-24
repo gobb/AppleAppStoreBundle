@@ -26,10 +26,10 @@ class PriceTransformerPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $priceTransformerManager = $container->getDefinition('apple.appstore.pricetransformers');
+        $priceTransformerManager = $container->getDefinition('apple.app_store.pricetransformers');
         $priceTransformerMap = array();
 
-        foreach ($container->findTaggedServiceIds('apple.appstore.pricetransformer') as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('apple.app_store.pricetransformer') as $id => $attributes) {
             // Fix attributes
             $attributes = $this->fixAttributes($attributes);
 
@@ -68,7 +68,7 @@ class PriceTransformerPass implements CompilerPassInterface
             $priceTransformerMap[$currency] = $id;
         }
 
-        $container->setParameter('apple.appstore.pricetransformer_map', $priceTransformerMap);
+        $container->setParameter('apple.app_store.pricetransformer_map', $priceTransformerMap);
     }
 
     /**

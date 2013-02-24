@@ -5,27 +5,27 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="apple.appstore.pricetransformer.usd.class">Apple\AppStore\USDPriceTransformer</parameter>
-        <parameter key="apple.appstore.pricetransformer.rub.class">Apple\AppStore\RUBPriceTransformer</parameter>
-        <parameter key="apple.appstore.pricetransformer.uah.class">Apple\AppStore\UAHPriceTransformer</parameter>
-        <parameter key="apple.appstore.pricetransformer.cad.class">Apple\AppStore\CADPriceTransformer</parameter>
+        <parameter key="apple.app_store.pricetransformer.usd.class">Apple\AppStore\USDPriceTransformer</parameter>
+        <parameter key="apple.app_store.pricetransformer.rub.class">Apple\AppStore\RUBPriceTransformer</parameter>
+        <parameter key="apple.app_store.pricetransformer.uah.class">Apple\AppStore\UAHPriceTransformer</parameter>
+        <parameter key="apple.app_store.pricetransformer.cad.class">Apple\AppStore\CADPriceTransformer</parameter>
     </parameters>
 
     <services>
-        <service id="apple.appstore.pricetransformer.usd" class="%apple.appstore.pricetransformer.usd.class%">
-            <tag name="apple.appstore.pricetransformer" />
+        <service id="apple.app_store.pricetransformer.usd" class="%apple.app_store.pricetransformer.usd.class%">
+            <tag name="apple.app_store.pricetransformer" />
         </service>
 
-        <service id="apple.appstore.pricetransformer.rub" class="%apple.appstore.pricetransformer.rub.class%">
-            <tag name="apple.appstore.pricetransformer" />
+        <service id="apple.app_store.pricetransformer.rub" class="%apple.app_store.pricetransformer.rub.class%">
+            <tag name="apple.app_store.pricetransformer" />
         </service>
 
-        <service id="apple.appstore.pricetransformer.uah" class="%apple.appstore.pricetransformer.uah.class%">
-            <tag name="apple.appstore.pricetransformer" />
+        <service id="apple.app_store.pricetransformer.uah" class="%apple.app_store.pricetransformer.uah.class%">
+            <tag name="apple.app_store.pricetransformer" />
         </service>
 
-        <service id="apple.appstore.pricetransformer.cad" class="%apple.appstore.pricetransformer.cad.class%">
-            <tag name="apple.appstore.pricetransformer" />
+        <service id="apple.app_store.pricetransformer.cad" class="%apple.app_store.pricetransformer.cad.class%">
+            <tag name="apple.app_store.pricetransformer" />
         </service>
     </services>
 </container>

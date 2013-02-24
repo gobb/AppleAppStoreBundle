@@ -26,10 +26,10 @@ class AppStorePass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $storeManager = $container->getDefinition('apple.appstore.stores');
-        $priceTransformerMap = $container->getParameter('apple.appstore.pricetransformer_map');
+        $storeManager = $container->getDefinition('apple.app_store.stores');
+        $priceTransformerMap = $container->getParameter('apple.app_store.pricetransformer_map');
 
-        foreach ($container->findTaggedServiceIds('apple.appstore.store') as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('apple.app_store.store') as $id => $attributes) {
             $attributes = $this->fixAttributes($attributes);
 
             $attributes += array(
