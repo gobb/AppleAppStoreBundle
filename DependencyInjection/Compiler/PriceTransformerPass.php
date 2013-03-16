@@ -37,13 +37,13 @@ class PriceTransformerPass implements CompilerPassInterface
 
             // Validate price transformer class
             try {
-                // Get class from parameter
-                if (strpos($priceTransformerClass, '%') === 0) {
-                    $priceTransformerClass = $container->getParameter(trim($priceTransformerClass, '%'));
-                }
+                $parametersBag = $container->getParameterBag();
+
+                // Resolve parameter
+                $priceTransformerClass = $parametersBag->resolveString($priceTransformerClass);
 
                 $refPriceTransformer = new \ReflectionClass($priceTransformerClass);
-            } catch (\Exception $e) {
+            } catch (\ReflectionException $e) {
                 throw new \RuntimeException(sprintf(
                     'Can\'t initialize "%s" price transformer',
                     $id

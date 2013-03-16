@@ -40,13 +40,12 @@ class AppStorePass implements CompilerPassInterface
             $appStoreClass = $container->getDefinition($id)->getClass();
 
             try {
-                // Get class from parameter
-                if (strpos($appStoreClass, '%') === 0) {
-                    $appStoreClass = $container->getParameter(trim($appStoreClass, '%'));
-                }
+                $parametersBag = $container->getParameterBag();
+
+                $appStoreClass = $parametersBag->resolveString($appStoreClass);
 
                 $refAppStore = new \ReflectionClass($appStoreClass);
-            } catch (\Exception $e) {
+            } catch (\ReflectionException $e) {
                 throw new \RuntimeException(sprintf(
                     'Can\'t initialize "%s" app store.',
                     $id
