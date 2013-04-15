@@ -46,12 +46,15 @@ class StoresList extends ContainerAwareCommand
         $output->writeln(sprintf('Exists <info>%s</info> stores.', count($storeManager)));
         $output->writeln('');
         foreach ($storeManager as $store) {
+            /** @var $store \Apple\AppStore\AppStoreInterface */
             $output->writeln(sprintf(' - <comment>%s</comment>', strtoupper($store->getCountryISO())));
+
+            $priceTransformer = $store->getPriceTransformer();
 
             $countryName = $countries[strtoupper($store->getCountryISO())];
             $output->writeln(sprintf('  %-10s<comment>%s</comment>', 'Country:', $countryName));
             $output->writeln(sprintf('  %-10s<info>%s</info>', 'Class:', get_class($store)));
-            $output->writeln(sprintf('  %-10s<info>%s</info>', 'Currency:', $store->getPriceTransformer()->getPriceCurrency()));
+            $output->writeln(sprintf('  %-10s<info>%s</info>', 'Currency:', $priceTransformer->getCurrency()));
             $output->writeln('');
         }
 

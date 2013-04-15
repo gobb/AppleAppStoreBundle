@@ -41,9 +41,9 @@ class AppStorePass implements CompilerPassInterface
 
             try {
                 $parametersBag = $container->getParameterBag();
+                $appStoreClass = $parametersBag->resolveValue($appStoreClass);
 
-                $appStoreClass = $parametersBag->resolveString($appStoreClass);
-
+                // Create new reflection for control class not found error
                 $refAppStore = new \ReflectionClass($appStoreClass);
             } catch (\ReflectionException $e) {
                 throw new \RuntimeException(sprintf(

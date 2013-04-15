@@ -27,6 +27,7 @@ class PriceTransformerManager extends ManagerBag
      * Add price transformer to collection
      *
      * @param PriceTransformerInterface $priceTransformer
+     * @return PriceTransformerManager
      */
     public function add(PriceTransformerInterface $priceTransformer)
     {

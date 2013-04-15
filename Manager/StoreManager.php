@@ -27,6 +27,7 @@ class StoreManager extends ManagerBag
      * Add app store to collection
      *
      * @param AppStoreInterface $appStore
+     * @return StoreManager
      */
     public function add(AppStoreInterface $appStore)
     {

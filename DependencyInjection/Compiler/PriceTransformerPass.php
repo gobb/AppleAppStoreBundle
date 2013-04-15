@@ -14,7 +14,6 @@ namespace Apple\AppStoreBundle\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
-use Apple\AppStore\AppStores;
 
 /**
  * Apple Price transformer compiler pass
@@ -38,9 +37,7 @@ class PriceTransformerPass implements CompilerPassInterface
             // Validate price transformer class
             try {
                 $parametersBag = $container->getParameterBag();
-
-                // Resolve parameter
-                $priceTransformerClass = $parametersBag->resolveString($priceTransformerClass);
+                $priceTransformerClass = $parametersBag->resolveValue($priceTransformerClass);
 
                 $refPriceTransformer = new \ReflectionClass($priceTransformerClass);
             } catch (\ReflectionException $e) {
