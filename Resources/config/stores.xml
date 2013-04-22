@@ -9,6 +9,9 @@
         <parameter key="apple.app_store.store.ru.class">Apple\AppStore\RUStore</parameter>
         <parameter key="apple.app_store.store.ca.class">Apple\AppStore\CAStore</parameter>
         <parameter key="apple.app_store.store.ua.class">Apple\AppStore\UAStore</parameter>
+        <parameter key="apple.app_store.store.de.class">Apple\AppStore\DEStore</parameter>
+        <parameter key="apple.app_store.store.es.class">Apple\AppStore\ESStore</parameter>
+        <parameter key="apple.app_store.store.fr.class">Apple\AppStore\FRStore</parameter>
     </parameters>
 
     <services>
@@ -26,6 +29,18 @@
 
         <service id="apple.app_store.store.ua" class="%apple.app_store.store.ua.class%">
             <tag name="apple.app_store.store" pricetransformer="uah" />
+        </service>
+
+        <service id="apple.app_store.store.de" class="%apple.app_store.store.de.class%">
+            <tag name="apple.app_store.store" pricetransformer="eur" />
+        </service>
+
+        <service id="apple.app_store.store.es" class="%apple.app_store.store.es.class%">
+            <tag name="apple.app_store.store" pricetransformer="eur" />
+        </service>
+
+        <service id="apple.app_store.store.fr" class="%apple.app_store.store.fr.class%">
+            <tag name="apple.app_store.store" pricetransformer="eur" />
         </service>
     </services>
 </container>
